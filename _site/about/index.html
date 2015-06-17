@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>About</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="/about/">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <!-- script references -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function () {
+
+    var navListItems = $('div.setup-panel div a'),
+            allWells = $('.setup-content'),
+            allNextBtn = $('.nextBtn');
+
+    allWells.hide();
+
+    navListItems.click(function (e) {
+        e.preventDefault();
+        var $target = $($(this).attr('href')),
+                $item = $(this);
+
+        if (!$item.hasClass('disabled')) {
+            navListItems.removeClass('btn-primary').addClass('btn-default');
+            $item.addClass('btn-primary');
+            allWells.hide();
+            $target.show();
+            $target.find('input:eq(0)').focus();
+        }
+    });
+
+    allNextBtn.click(function(){
+        var curStep = $(this).closest(".setup-content"),
+            curStepBtn = curStep.attr("id"),
+            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+            curInputs = curStep.find("input[type='text'],input[type='url']"),
+            isValid = true;
+
+        $(".form-group").removeClass("has-error");
+        for(var i=0; i<curInputs.length; i++){
+            if (!curInputs[i].validity.valid){
+                isValid = false;
+                $(curInputs[i]).closest(".form-group").addClass("has-error");
+            }
+        }
+
+        if (isValid)
+            nextStepWizard.removeAttr('disabled').trigger('click');
+    });
+
+    $('div.setup-panel div a.btn-primary').trigger('click');
+});
+    </script>
+</head>
+
+
+  <body>
+
+    <header>
+	<div class="cover-home">
+	  <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="brand-logo" href="#"><a href="#" class="#">Birstein</a></div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login/">Ingresar</a></li>
+            <li><a href="#">Nuestras Cervecerías</a></li>
+            <li><a href="#">Regala una Subscripción</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+ </nav>
+
+      <div class="container inner	">
+	      <div class="col-lg-7 v-center">
+	        <h1>Drink Better Beers</h1>
+	         <p>Detrás de cada cerveza hay una historia, nosotros elegimos las mejores y las hacemos llegar todos los meses de manera segura y rápida a la puerta de tu casa.</p>
+	         <a href="/subscription/" class="btn btn-outline btn-lg">Suscríbete Ahora</a>
+	      </div>
+      </div>
+    </div>
+</header>
+
+
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">About</h1>
+  </header>
+
+  <article class="post-content">
+    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+
+<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+
+<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+
+  </article>
+
+</div>
+
+
+    <footer>
+	<div class="container footer">
+			<p>© 20014–2015 The Glow City</p>
+	</div>
+</footer>
+
+
+  </body>
+
+</html>
