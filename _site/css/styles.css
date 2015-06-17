@@ -1,19 +1,21 @@
 html, body {
   height:100%;
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  font-size: 14px;
+  line-height: 1.66;
+  font-size: 15px;
+  font-weight: normal;
   color: rgba(0,0,0,0.75);
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Signika', sans-serif;
   font-size:32px;
   font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, legend, h6 {
   color: #2e3b4e;
+  font-family: 'Signika', sans-serif;
 }
 
 .lead{
@@ -22,17 +24,12 @@ h1, h2, h3, h4, h5, legend, h6 {
 }
 
 /* Navigation */
-.navbar-brand{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    text-align: center;
-    margin: auto;
-}
+
 .navbar-default{
 	background:none;
 	border:0;
+	margin: 0;
+	padding: 20px 20px;
 }
 
 .navbar-toggle{
@@ -49,15 +46,26 @@ h1, h2, h3, h4, h5, legend, h6 {
 }
 
 .navbar-default .navbar-nav>li>a:hover{
-	opacity: 0.6;
+	opacity: 0.9;
 	color: #fff;
+}
+
+.brand-logo{
+	float: left;
+}
+
+.brand-logo a{
+	color: #fff;
+	font-family: 'Signika', sans-serif;
+	font-size: 36px;
+	font-weight: bold;
 }
 /* Custom container  full */
 
 .cover-home{
 	background: url(../img/jobs-banner-bg.jpg) no-repeat bottom center;
 	background-size: cover !important;
-	min-height: 560px;
+	height: auto;
 }
 
 .wrapper{
@@ -65,23 +73,19 @@ h1, h2, h3, h4, h5, legend, h6 {
 }
 
 .v-center {
-  top: 100px;
-  margin: 0 auto;
+	margin: 100px auto;
 }
 
 .v-center h1{
 	color: #fff;
-	font-size: 42px;
+	font-size: 60px;
 	font-weight: bold;
-	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
+	font-family: 'Signika', sans-serif;
 }
 
 .v-center p{
 	color: #fff;
 	font-size: 20px;
-	line-height: 30px;
-	padding: 0;
 }
 /* Pricing */
 
@@ -105,12 +109,12 @@ h1, h2, h3, h4, h5, legend, h6 {
 
 span.price{
 	font-size: 60px;
-	font-weight: lighter;
+	font-family: 'Signika', sans-serif;
 }
 
 span.clp{
 	color: #56B881;
-	font-size: 20px;
+	font-size: 16px;
 }
 
 span.money{
@@ -189,7 +193,7 @@ p.descriptions{
 /* Features */
 
 .features{
-	margin: 50px auto 0;
+	margin: 70px auto 0;
 	text-align: center;
 	padding-bottom: 40px;
 	border-bottom: 1px solid #fafafa;
@@ -208,7 +212,7 @@ p.descriptions{
 	position: absolute;
 	top: 1px;
 	left: 0;
-	background-image: url(/img/ico2.png);
+	background-image: url(../img/ico2.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 45px;
@@ -264,6 +268,17 @@ p.descriptions{
 }
 #Discover img{
 	width: 100%;
+}
+/*products*/
+
+.products{
+	margin: 50px auto;
+}
+
+img.products{
+	width: 30%;
+	margin: 0 0 20px 0;
+
 }
 /*Footer*/
 
