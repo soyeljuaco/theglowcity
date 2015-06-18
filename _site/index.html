@@ -5,15 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <title>Drinks Better Beer</title>
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
-
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href=" /css/main.css ">
     <link rel="canonical" href="/">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -21,55 +18,26 @@
     <link href='http://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <!-- script references -->
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-		$(document).ready(function () {
+    $(document).ready(function() {
+        $('a[href^="#"]').bind('click.smoothscroll', function(e) 55 {
+            e.preventDefault();
 
-    var navListItems = $('div.setup-panel div a'),
-            allWells = $('.setup-content'),
-            allNextBtn = $('.nextBtn');
+            var target = this.hash,
+                $target = $(target);
 
-    allWells.hide();
-
-    navListItems.click(function (e) {
-        e.preventDefault();
-        var $target = $($(this).attr('href')),
-                $item = $(this);
-
-        if (!$item.hasClass('disabled')) {
-            navListItems.removeClass('btn-primary').addClass('btn-default');
-            $item.addClass('btn-primary');
-            allWells.hide();
-            $target.show();
-            $target.find('input:eq(0)').focus();
-        }
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 40
+            }, 600, 'swing', function() {
+                window.location.hash = target;
+            });
+        });
     });
-
-    allNextBtn.click(function(){
-        var curStep = $(this).closest(".setup-content"),
-            curStepBtn = curStep.attr("id"),
-            nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-            curInputs = curStep.find("input[type='text'],input[type='url']"),
-            isValid = true;
-
-        $(".form-group").removeClass("has-error");
-        for(var i=0; i<curInputs.length; i++){
-            if (!curInputs[i].validity.valid){
-                isValid = false;
-                $(curInputs[i]).closest(".form-group").addClass("has-error");
-            }
-        }
-
-        if (isValid)
-            nextStepWizard.removeAttr('disabled').trigger('click');
-    });
-
-    $('div.setup-panel div a.btn-primary').trigger('click');
-});
     </script>
 </head>
-
 
   <body>
 
@@ -77,72 +45,62 @@
 	<div class="cover-home">
       <div class="container inner">
 	      <div class="v-center">
-	      	<img src="img/logo-glow2.png" class="logo">
+	      	<img src="img/logo-glow2.png" class="logo img-responsive">
 	      </div>
-	      <a href="/subscription/" class="btn btn-outline btn-lg">Suscríbete Ahora</a>
+	      <p>Sketch gives you the power, flexibility and speed you always wanted in a lightweight</p>
+	      <button class="btn btn-success ipm-btn custom-btn">Comenzar a descubrir</button>
       </div>
     </div>
 </header>
 
 
-        	
-	<!-- 	<div class="container pricing">
-    	<div class="row title"><h1>Precio de Suscripción<h1></div>
-    	<div class="col-md-6 left">
-    		<h4><strong>Mensualmente</strong>, suscripción básica.</h4>
-    		<span class="money">$</span>
-    		<span class="price">16.290</span>
-    		<span class="clp">/ Por mes</span>
-    		<p>Suscripción por <strong>8 cervezas mensuales</strong>, 3 tipos de cervezas artesanales y stickers para que compartas con tus amigos.</p>
-    	</div>
-    	<div class="col-md-6 right">
-    		<h4><strong>Trimestral</strong>, 20% de ahorro mensual.</h4>
-    		<span class="money">$</span>
-    		<span class="price">13.270</span>
-    		<span class="clp">/ Por mes</span>
-    		<p><strong>$40.290 por 3 meses</strong>, recíbes 8 cervezas mensuales, un cupón de <strong>$5.000</strong> de descuento para un amigo y te enviarémos una polera de regalo.</p>
-    	</div>
-	</div>
-	<div class="container call">
-		<a href="/subscription" class="btn btn-outline btn-lg">Descubre tu Suscripción</a>
-	</div>
-
-	<div class="container features clearfix">
-        <div class="col-lg-3">
-          <img alt="consumers" class="products" src="img/product1.png">
-          <h4>Shipwreck</h4>
-          <p>This hearty Scottish-style amber is our flagship ale, brewed since 1998. UK malts, hops and our proprietary.</p>
+        	<main class="cd-main-content">
+    <div class="container intro">
+        <h1>¿Qué es The Glow City?</h1>
+        <p>Swiftype allows you to see what your users are searching for, clicking on, and engaging with—while they are still searching, clicking</p>
+    </div>
+    <section id="Discover" class="container">
+        <div class="cell col-md-6">
+            <div class="col-md-12 quote">In a survey of our customers, 85% are extremely likely to recommend Square Capital.</div>
+            <div class="col-xs-6 col-md-6 testimonial1"><img src="img/img1.png"></img>
+            </div>
+            <div class="col-xs-6 col-md-6 testimonial2"><img src="img/img2.png"></img>
+            </div>
         </div>
-        <div class="col-lg-3">
-          <img alt="consumers" class="products" src="img/product2.png">
-          <h4>Seaport Vanilla Stout</h4>
-          <p>Our take on the classic Irish stout style is complex, malty and satisfying.</p>
+        <div class="col-md-6"><img src="img/img3.png"></img>
         </div>
-        <div class="col-lg-3">
-          <img alt="consumers" class="products" src="img/product3.png">
-          <h4>Tasman Pale Ale</h4>
-          <p>The addition of pure Madagascan vanilla beans perfectly complements the rich roasted malt notes of chocolate and coffee.</p>
+    </section>
+</main>
+	<div class="container gift clearfix">
+    <div class="col-md-3">
+    	<div class="p1">
+	        <img alt="consumers" class="products" src="img/img4.png" width="50" height="90">
+	        <h4>Premio</h4>
+	        <p>Sorpresa</p>
         </div>
-        <div class="col-lg-3">
-          <img alt="consumers" class="products" src="img/product4.png">
-          <h4>Race Rocks</h4>
-          <p>The addition of pure Madagascan vanilla beans perfectly complements the rich roasted malt.</p>
+    </div>
+    <div class="col-md-3">
+    	<div class="p1">
+	        <img alt="consumers" class="products" src="img/img4.png" width="50" height="90">
+	        <h4>Premio</h4>
+	        <p>Sorpresa</p>
         </div>
+    </div>
+    <div class="col-md-3">
+    	<div class="p1">
+	        <img alt="consumers" class="products" src="img/img4.png" width="50" height="90">
+	        <h4>Premio</h4>
+	        <p>Sorpresa</p>
+        </div>
+    </div>
+    <div class="col-md-3">
+    	<div class="p1">
+	        <img alt="consumers" class="products" src="img/img4.png" width="50" height="90">
+	        <h4>Premio</h4>
+	        <p>Sorpresa</p>
+        </div>
+    </div>
 </div>
-	  <div class="container delivery">
-		<img src="img/boxes.jpg" class="img-responsive" alt="boxes for delivery" with="" alt="">
-		<h3>Nuestro Reparto</h3>
-		<p class="descriptions">Runkeeper helps millions of runners explore new trails with a route planning feature that incorporates a detailed terrain map with elevation data.</p>
-  </div>
-		<section id="Discover" class="container">
-   		<div class="cell col-md-6">
-			<div class="col-md-12 quote">In a survey of our customers, 85% are extremely likely to recommend Square Capital.</div>
-			<div class="col-xs-6 col-md-6 testimonial1"><img src="img/testimonial2.2x.jpg"></img></div>
-			<div class="col-xs-6 col-md-6 testimonial2"><img src="img/testimonial3.2x.jpg"></img></div>
-   		</div>
-   		<div class="col-md-6"><img src="img/testimonial1.2x.jpg"></img></div>
-    </section> -->
-
 
     <footer>
 	<div class="container footer">
