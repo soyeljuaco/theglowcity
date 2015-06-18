@@ -100,9 +100,14 @@ h1{
 	border:1px dashed #CED3DA;
 	padding: 15px 30px;
 	border-radius: 5px;
+	margin: 10px 0;
 }
 .p1:hover{
 	background: #f6f6f6;
+}
+
+#Discove img{
+	width: 100%;
 }
 
 /* Portrait tablet to landscape and desktop */
