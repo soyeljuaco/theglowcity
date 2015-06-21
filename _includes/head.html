@@ -17,15 +17,33 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    $(function() {
-        $("[data-toggle=popover]").popover({
-            html: true,
-            content: function() {
-                return $('#popover-content').html();
-            }
-        });
+	  $(document).ready(function(){
+	   $(window).bind('scroll', function() {
+	   var navHeight = $( window ).height() - 55;
+			 if ($(window).scrollTop() > navHeight) {
+				 $('nav').addClass('fixed');
+			 }
+			 else {
+				 $('nav').removeClass('fixed');
+			 }
+		});
+	});
+	  $(document).ready(function(){
+    $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+        e.preventDefault();
 
-    })
+        var target = this.hash,
+        $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top-40
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+});
+</script>
+    <script type="text/javascript">
     $(document).on('change', '.btn-file :file', function() {
         var input = $(this),
             numFiles = input.get(0).files ? input.get(0).files.length : 1,
