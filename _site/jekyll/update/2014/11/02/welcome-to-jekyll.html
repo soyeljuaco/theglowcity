@@ -18,22 +18,37 @@
     <link href='http://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <!-- script references -->
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+    $(function() {
+        $("[data-toggle=popover]").popover({
+            html: true,
+            content: function() {
+                return $('#popover-content').html();
+            }
+        });
+
+    })
+    $(document).on('change', '.btn-file :file', function() {
+        var input = $(this),
+            numFiles = input.get(0).files ? input.get(0).files.length : 1,
+            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+        input.trigger('fileselect', [numFiles, label]);
+    });
+
     $(document).ready(function() {
-        $('a[href^="#"]').bind('click.smoothscroll', function(e) 55 {
-            e.preventDefault();
+        $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
 
-            var target = this.hash,
-                $target = $(target);
+            var input = $(this).parents('.input-group').find(':text'),
+                log = numFiles > 1 ? numFiles + ' files selected' : label;
 
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - 40
-            }, 600, 'swing', function() {
-                window.location.hash = target;
-            });
+            if (input.length) {
+                input.val(log);
+            } else {
+                if (log) alert(log);
+            }
+
         });
     });
     </script>
@@ -84,7 +99,16 @@
 
     <footer>
 	<div class="container footer">
-			<p>© 20014–2015 The Glow City</p>
+		<img alt="The Glow City" class="logoFooter" src="../img/glowFooter.png" width="151" height="30">
+		<ul class="footerList">
+            <li class="footerItem"><a href="">Status</a></li>
+            <li class="footerItem"><a href="">Blog</a></li>
+            <li class="footerItem"><a href="">About</a></li>
+            <li class="footerItem"><a href="">Contact</a></li>
+            <li class="footerItem"><a href="">Terms and Privacy</a></li>
+            <li class="footerItem"><a href="">Help</a></li>
+        </ul>
+		<p>© 2015 The Glow City, Inc. Made in Santiago de Chile</p>
 	</div>
 </footer>
 
