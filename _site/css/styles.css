@@ -210,6 +210,10 @@ section#gifts{
 	margin-bottom: 50px;
 }
 
+#wall img{
+	width: 100%;
+}
+
 .intro {
     text-align: center;
     width: 100%;
