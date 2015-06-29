@@ -18,12 +18,13 @@
     <link href='http://fonts.googleapis.com/css?family=Signika:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <!-- script references -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="/js/jquery.animsition.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 	  $(document).ready(function(){
 	   $(window).bind('scroll', function() {
-	   var navHeight = $( window ).height() - 55;
+	   var navHeight = $( window ).height() ;
 			 if ($(window).scrollTop() > navHeight) {
 				 $('nav').addClass('fixed');
 			 }
@@ -40,48 +41,34 @@
         $target = $(target);
 
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top-40
+            'scrollTop': $target.offset().top
         }, 900, 'swing', function () {
             window.location.hash = target;
         });
     });
 });
 </script>
-    <script type="text/javascript">
-    $(document).on('change', '.btn-file :file', function() {
-        var input = $(this),
-            numFiles = input.get(0).files ? input.get(0).files.length : 1,
-            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-        input.trigger('fileselect', [numFiles, label]);
-    });
-
-    $(document).ready(function() {
-        $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-
-            var input = $(this).parents('.input-group').find(':text'),
-                log = numFiles > 1 ? numFiles + ' files selected' : label;
-
-            if (input.length) {
-                input.val(log);
-            } else {
-                if (log) alert(log);
-            }
-
-        });
-    });
-    </script>
 </head>
 
   <body>
-  	<nav class="inside">
+  	<nav>
     <div class="col-lg-2 logoNav">
-        <a href="/index.html"><img src="/img/logo-glowcity.png" class="logo img-responsive" width="151" height="34"></a>
+        <a href=""><img src="img/logo-glowcity.png" class="logo img-responsive" width="151" height="34"></a>
     </div>
     <div class="col-lg-8">
-
+        <ul>
+            <li><a href="#intro">The Glow City</a></li>
+            <li><a href="#section2">Cómo participar</a></li>
+            <li><a href="#gifts">Premios</a></li>
+            <li><a href="#partners">Auspiciadores</a></li>
+            <li><a href="#wallpeople">Muro de Grafitis</a></li>
+        </ul>
     </div>
-    <div class="col-lg-2 btnNav">
-    </div>
+    <!--     <div class="col-lg-2 btnNav">
+        <a href="#wall">
+            <button class="btn btn-success ipm-btn custom-btn" href="#wall">Comenzar a descubrir</button>
+        </a>
+    </div> -->
 </nav>
         <div class="container infoDetails">
     <div class="col-md-5">

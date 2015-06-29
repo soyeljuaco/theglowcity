@@ -48,17 +48,11 @@ h1 {
 }
 
 .full-page {
-  background: #081C27;
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .cover-home {
-    background: url(../img/bg.jpg) no-repeat bottom center;
     background-size: cover !important;
     height: 812px;
 }
@@ -124,12 +118,13 @@ nav.inside{
   text-align: center;
 }
 nav {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 55px;
   background: #000;
   text-align: center;
+  z-index: 90;
 }
 
 nav li {
@@ -194,11 +189,11 @@ span.titleBox {
 }
 
 section#intro{
-	padding: 40px 0;
+	padding: 100px 0;
 }
 
 section#gifts{
-	padding: 40px 0;
+	padding: 100px 0;
 	text-align: center;
 }
 
@@ -284,13 +279,16 @@ section#gifts{
     width: 100%;
 }
 
+img.brick{
+	height: 25px;
+}
+
 .brick {
     padding: 0;
 }
 
 a.Onclick:hover {
     opacity: 0.9;
-    background: url(img/);
     outline: none;
     cursor: pointer;
 }
@@ -507,19 +505,14 @@ footer {
 
 /* Custom grid system */
 
-.col-md-1 {
-    padding: 0;
-    width: 12.5%;
+.col-lg-40{
+	width: 100%;
 }
 
-.col-md-half {
+.col-lg-1 {
+	margin: 0;
     padding: 0;
-    width: 6.25%;
-}
-
-.col-custom {
-    padding: 0;
-    width: 100%;
+    width: 4%;
 }
 
 /* Portrait tablet to landscape and desktop */
