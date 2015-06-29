@@ -515,13 +515,28 @@ footer {
 
 .col-lg-40{
 	width: 100%;
+	height: 25px;
 }
 
 .col-lg-1 {
 	margin: 0;
     padding: 0;
-    width: 2%;
+    width: 5%;
     height: 15px;
+}
+
+.col-md-half {
+    padding: 0;
+    width: 2.50%;
+}
+
+.col-custom {
+    padding: 0;
+    width: 100%;
+}
+
+.col-md-1{
+	padding: 0;
 }
 
 /* Portrait tablet to landscape and desktop */
