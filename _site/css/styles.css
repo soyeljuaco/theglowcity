@@ -171,8 +171,11 @@ li.partners a:hover {
 /* Custom container  full */
 
 #Discover{
-	padding: 0;
 	margin: 50px auto;
+}
+
+.main-btn{
+	text-align: center;
 }
 
 .titles {
@@ -195,6 +198,10 @@ section#intro{
 section#gifts{
 	padding: 100px 0;
 	text-align: center;
+}
+
+section#discover{
+	padding: 100px 0;
 }
 
 
