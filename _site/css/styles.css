@@ -288,7 +288,7 @@ section#discover{
 }
 
 a.Onclick:hover {
-    opacity: 0.9;
+    opacity: 0.5;
     outline: none;
     cursor: pointer;
 }
