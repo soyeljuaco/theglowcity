@@ -36,6 +36,7 @@ h1 {
 	padding: 7px 0 0 0;
 }
 /* Custom container  full */
+
 .display-table {
   display: table;
   width: 100%;
@@ -215,16 +216,6 @@ section#discover{
     line-height: 30px;
 }
 
-/* wall */
-
-#wall{
-	margin-bottom: 50px;
-}
-
-#wall img{
-	width: 100%;
-}
-
 .intro {
     text-align: center;
     width: 100%;
@@ -284,11 +275,6 @@ section#discover{
 
 .img-discover img {
     width: 100%;
-}
-
-img.brick{
-	height: 25px;
-	width: 100%;
 }
 
 .brick {
@@ -519,10 +505,44 @@ footer {
 }
 
 .col-lg-1 {
-	margin: 0;
-    padding: 0;
-    width: 5%;
-    height: 15px;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  height: 25px;
+  background-color: red;
+  border: 1px solid #fff;
+}
+
+.col-md-1 {
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  height: 25px;
+  background-color: red;
+  border: 1px solid #fff;
+  float: left;
+}
+
+
+
+.col-lg-custom {
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  height: 25px;
+  background-color: red;
+  border: 1px solid #fff;
+  float: left;
+}
+
+.col-lg-custom-half {
+  margin: 0;
+  padding: 0;
+  width: 5%;
+  height: 25px;
+  background-color: red;
+  border: 1px solid #fff;
+  float: left;
 }
 
 .col-md-half {
