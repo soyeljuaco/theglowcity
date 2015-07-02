@@ -37,6 +37,12 @@ h1 {
 }
 /* Custom container  full */
 
+/*#wall{
+	background-size: cover;
+	background-image: url(../img/bg-home.jpg);
+	background-repeat: no-repeat;
+}*/
+
 .display-table {
   display: table;
   width: 100%;
@@ -509,8 +515,7 @@ footer {
   padding: 0;
   width: 10%;
   height: 25px;
-  background-color: red;
-  border: 1px solid #fff;
+  background-color: #000;
 }
 
 .col-md-1 {
@@ -518,8 +523,7 @@ footer {
   padding: 0;
   width: 10%;
   height: 25px;
-  background-color: red;
-  border: 1px solid #fff;
+  background-color: #000;
   float: left;
 }
 
@@ -530,8 +534,7 @@ footer {
   padding: 0;
   width: 10%;
   height: 25px;
-  background-color: red;
-  border: 1px solid #fff;
+  background-color: #000;
   float: left;
 }
 
@@ -540,8 +543,7 @@ footer {
   padding: 0;
   width: 5%;
   height: 25px;
-  background-color: red;
-  border: 1px solid #fff;
+  background-color: #000;
   float: left;
 }
 
@@ -557,6 +559,11 @@ footer {
 
 .col-md-1{
 	padding: 0;
+}
+
+img.img-wall{
+	height: 25px;
+	width: 100%;
 }
 
 /* Portrait tablet to landscape and desktop */
