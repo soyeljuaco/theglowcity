@@ -5,8 +5,6 @@ body {
     color: #525558;
     font-size: 15px;
     font-weight: normal;
-    margin: 0;
-    padding: 0;
 }
 
 h1,
@@ -58,8 +56,6 @@ h1 {
 
 .all{
 	max-width: 960px;
-	margin: 0 auto;
-	padding: 100px 0 0 0;
 }
 
 .inner {
