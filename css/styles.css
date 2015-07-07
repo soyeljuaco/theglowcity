@@ -5,6 +5,8 @@ body {
     color: #525558;
     font-size: 15px;
     font-weight: normal;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -54,14 +56,10 @@ h1 {
   vertical-align: middle;
 }
 
-.full-page {
-  width: 100%;
-  height: 100%;
-}
-
-.cover-home {
-    background-size: cover !important;
-    height: 812px;
+.all{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 100px 0 0 0;
 }
 
 .inner {
@@ -479,29 +477,6 @@ footer {
     margin: 20px 0;
 }
 
-.carousel-indicators {
-  bottom: -50px;
-}
-
-.carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  cursor: pointer;
-  background: #EDEEF0;
-  border: 1px solid #AFB7C1;
-  border-radius: 10px;
-}
-
-.carousel-indicators .active {
-  width: 12px;
-  height: 12px;
-  margin: 0;
-  border:none;
-  background-color: #AFB7C1;
-}
 
 /* Custom grid system */
 
